@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chris Gu</title>
+  </head>
+  <canvas class="background"></canvas>
+  <body>
+    <div class="expandable-menu">
+      <div class="nav-container">
+        <nav>
+          <ul>
+            <li class="stagger home-button">Home</li>
+            <li class="stagger projects-button">Projects</li>
+            <li class="stagger about-button">About Me</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="menu-bar lines">
+      <svg
+        class="menu"
+        width="70"
+        height="70"
+        viewBox="0 0 100 100"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M22.1 38.1667H77.9C78.7222 38.1667 79.5107 37.8418 80.092 37.2636C80.6734 36.6853 81 35.9011 81 35.0833C81 34.2656 80.6734 33.4813 80.092 32.9031C79.5107 32.3249 78.7222 32 77.9 32H22.1C21.2778 32 20.4893 32.3249 19.908 32.9031C19.3266 33.4813 19 34.2656 19 35.0833C19 35.9011 19.3266 36.6853 19.908 37.2636C20.4893 37.8418 21.2778 38.1667 22.1 38.1667ZM77.9 62.8333H22.1C21.2778 62.8333 20.4893 63.1582 19.908 63.7364C19.3266 64.3147 19 65.0989 19 65.9167C19 66.7344 19.3266 67.5187 19.908 68.0969C20.4893 68.6752 21.2778 69 22.1 69H77.9C78.7222 69 79.5107 68.6752 80.092 68.0969C80.6734 67.5187 81 66.7344 81 65.9167C81 65.0989 80.6734 64.3147 80.092 63.7364C79.5107 63.1582 78.7222 62.8333 77.9 62.8333ZM77.9 47.4167H22.1C21.2778 47.4167 20.4893 47.7415 19.908 48.3198C19.3266 48.898 19 49.6822 19 50.5C19 51.3178 19.3266 52.102 19.908 52.6802C20.4893 53.2585 21.2778 53.5833 22.1 53.5833H77.9C78.7222 53.5833 79.5107 53.2585 80.092 52.6802C80.6734 52.102 81 51.3178 81 50.5C81 49.6822 80.6734 48.898 80.092 48.3198C79.5107 47.7415 78.7222 47.4167 77.9 47.4167Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+    <div class="menu-bar cross">
+      <svg
+        width="70"
+        height="70"
+        viewBox="0 0 60 60"
+        fill="none"
+        id="cross-svg"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          transform="translate(14,13)"
+          d="M1.32625 1.32625C1.52945 1.12254 1.77085 0.960913 2.03661 0.850635C2.30237 0.740357 2.58727 0.683594 2.875 0.683594C3.16274 0.683594 3.44764 0.740357 3.7134 0.850635C3.97916 0.960913 4.22055 1.12254 4.42375 1.32625L16 12.9069L27.5763 1.32625C27.7796 1.12287 28.0211 0.961534 28.2868 0.851463C28.5526 0.741392 28.8374 0.684739 29.125 0.684739C29.4126 0.684739 29.6974 0.741392 29.9632 0.851463C30.2289 0.961534 30.4704 1.12287 30.6738 1.32625C30.8771 1.52964 31.0385 1.77109 31.1485 2.03682C31.2586 2.30256 31.3153 2.58737 31.3153 2.875C31.3153 3.16263 31.2586 3.44745 31.1485 3.71318C31.0385 3.97892 30.8771 4.22037 30.6738 4.42375L19.0931 16L30.6738 27.5763C30.8771 27.7796 31.0385 28.0211 31.1485 28.2868C31.2586 28.5526 31.3153 28.8374 31.3153 29.125C31.3153 29.4126 31.2586 29.6974 31.1485 29.9632C31.0385 30.2289 30.8771 30.4704 30.6738 30.6738C30.4704 30.8771 30.2289 31.0385 29.9632 31.1485C29.6974 31.2586 29.4126 31.3153 29.125 31.3153C28.8374 31.3153 28.5526 31.2586 28.2868 31.1485C28.0211 31.0385 27.7796 30.8771 27.5763 30.6738L16 19.0931L4.42375 30.6738C4.22037 30.8771 3.97892 31.0385 3.71318 31.1485C3.44745 31.2586 3.16263 31.3153 2.875 31.3153C2.58737 31.3153 2.30256 31.2586 2.03682 31.1485C1.77109 31.0385 1.52964 30.8771 1.32625 30.6738C1.12287 30.4704 0.961534 30.2289 0.851463 29.9632C0.741392 29.6974 0.684739 29.4126 0.684739 29.125C0.684739 28.8374 0.741392 28.5526 0.851463 28.2868C0.961534 28.0211 1.12287 27.7796 1.32625 27.5763L12.9069 16L1.32625 4.42375C1.12254 4.22055 0.960913 3.97916 0.850635 3.7134C0.740357 3.44764 0.683594 3.16274 0.683594 2.875C0.683594 2.58727 0.740357 2.30237 0.850635 2.03661C0.960913 1.77085 1.12254 1.52945 1.32625 1.32625Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+
+    <div class="hero">
+      <div class="content">
+        <h1 class="hero-name stagger2">Chris Gu</h1>
+        <p class="hero-title stagger2">Software Developer</p>
+        <div class="white-screen">
+          <div class="btn"></div>
+        </div>
+      </div>
+    </div>
+    <div class="page2">
+      <div class="space"></div>
+
+      <section class="project-title">
+        <div class="title-left">
+          <h1>Projects</h1>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="project-container expand">
+          <div class="project-content project1">
+            <div class="website">
+              <img src="website.png" alt="Website" class="left" />
+            </div>
+            <div class="right">
+              <p class="skill-title">October 2021</p>
+              <h1 class="proj-title" href="#">Website Porfolio</h1>
+              <p class="proj-desc">
+                This is my first website I created on my own. Designed in Figma
+                and created with HTML5, Sass, JavaScript. THREE.js libraries was
+                used to create the animation below. I learned React.js while
+                reseraching frontend development. React project is next in line!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-container second">
+          <div class="project-content second project2">
+            <canvas class="webgl left"></canvas>
+            <div class="right">
+              <p class="skill-title">September 2021</p>
+              <h1 class="proj-title" href="#">Minecraft</h1>
+              <p class="proj-desc">
+                This is a quick demonstration of THREE.js, a JavaScript library
+                for creating 3D vector graphics using WebGL. Currently learning
+                more about graphics and THREE.js. Project coming soon!
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="project-container third">
+          <div class="project-content third project3">
+            <div class="website">
+              <img src="chess.png" alt="Chess" class="left" />
+            </div>
+            <div class="right">
+              <p class="skill-title">April 2021</p>
+              <h1 class="proj-title" href="#">Chess</h1>
+              <p class="proj-desc">
+                HTML5 Chess game created using OCaml. The logic was all written
+                in OCaml, and the GUI was created using js_of_ocaml, a OCaml to
+                javascript compiler. Created as a final project for Cornell's
+                CS3410.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="project-container second">
+          <div class="project-content second project4">
+            <div class="website">
+              <img src="tetris2.png" alt="Website" class="left" />
+            </div>
+            <div class="right">
+              <p class="skill-title">May 2019</p>
+              <h1 class="proj-title" href="#">Tetris</h1>
+              <p class="proj-desc"></p>
+              Tetris created with Java! Graphics were created using Java AWT
+              graphics. There's a few strange pieces but that's okay! There is
+              also two player functionality for you to play with your friends.
+              Implemented using object oriented design.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="about-container">
+          <div class="about-title">
+            <h1 class="about-name">About Me</h1>
+            <p class="about-desc">
+              My name is Chris and I'm currently a sophomore at Cornell
+              University studying computer science. This is my first website I
+              designed and built from the ground up! Hoping to pursue full stack
+              development. More projects are in the works! My socials are in
+              links below. Check me out!
+            </p>
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/cgu2020"
+                  target="_blank"
+                  class="github"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="white"
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/chris-gu-6074421a3/"
+                  class="linkedin"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill="white"
+                      d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                    /></svg
+                ></a>
+              </li>
+              <li>
+                <a href="" target="_blank" class="resume"
+                  ><svg
+                    width="24"
+                    height="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                  >
+                    <path
+                      fill="white"
+                      d="M22 0h-20v24h14l6-6v-18zm-7 23h-12v-22h18v16h-6v6zm1-5h4.586l-4.586 4.586v-4.586zm-3 1h-8v1h8v-1zm0-3h-8v1h8v-1zm6-2v-1h-14v1h14zm0-4h-4v1h4v-1zm-6.006 1h-7.991l-.003-.789c-.003-.72-.006-1.615 1.314-1.92 1.483-.341 1.236-.418 1.158-.563-1.078-1.988-.71-3.173-.395-3.703.388-.651 1.089-1.025 1.923-1.025.827 0 1.523.368 1.91 1.011.545.904.409 2.222-.379 3.713-.105.196-.195.255 1.119.559 1.355.312 1.352 1.212 1.35 1.936l-.006.781zm-6.994-1h6c-.007-.547-.07-.626-.54-.734-.855-.198-1.629-.376-1.901-.972-.142-.311-.113-.66.087-1.039.61-1.151.758-2.146.407-2.729-.276-.458-.778-.526-1.053-.526-.48 0-.857.19-1.063.537-.352.59-.201 1.58.414 2.714.204.377.236.727.095 1.039-.269.598-1.036.774-1.847.962-.525.121-.593.202-.599.748zm13-2v-1h-4v1h4zm0-4h-4v1h4v-1z"
+                    /></svg
+                ></a>
+              </li>
+            </ul>
+          </div>
+          <div class="icons"></div>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="contact-container">
+          <div class="contact-details">
+            <ul>
+              <li>Chris Gu</li>
+              <li>cjg245@cornell.edu</li>
+              <li>781-315-5244</li>
+              <li>2021</li>
+            </ul>
+          </div>
+          <div class="email-container"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+      integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+      window.onscroll = function (e) {
+        console.log(window.scrollY); // Value of scroll Y in px
+      };
+      var tl = gsap.timeline();
+      window.onload = function () {
+        Particles.init({ selector: ".background" });
+      };
+
+      var nav = false;
+      var home = true;
+
+      function expand() {
+        gsap.to(".expandable-menu", {
+          width: "30%",
+        });
+        $(".lines").css({
+          display: "none",
+        });
+        setTimeout(function () {
+          $(".cross").css({
+            display: "initial",
+            opacity: "100%",
+          });
+          $(".nav-container").css({
+            display: "initial",
+          });
+          $(".stagger").css({
+            opacity: "100%",
+          });
+          gsap.from(".cross", {
+            opacity: 0,
+            ease: Power4.ease,
+          });
+          gsap.from(".stagger", {
+            opacity: 0,
+            stagger: 0.3,
+            ease: Power4.ease,
+          });
+        }, 300);
+        nav = true;
+      }
+
+      function collapse() {
+        gsap.to(".stagger", {
+          opacity: 0,
+          ease: Power4.ease,
+        });
+        gsap.to(".cross", {
+          opacity: 0,
+          ease: Power4.ease,
+        });
+
+        setTimeout(function () {
+          $(".cross").css({
+            display: "none",
+          });
+          $(".nav-container").css({
+            display: "none",
+          });
+          $(".lines").css({
+            display: "initial",
+          });
+
+          gsap.to(".expandable-menu", {
+            width: "0%",
+          });
+        }, 300);
+        nav = false;
+      }
+
+      function exitHome() {
+        // $('.white-screen').css({
+        //   position: 'absolute'
+        // })
+        var delay = 0;
+        if (nav) {
+          collapse();
+          delay = 300;
+        }
+        setTimeout(function () {
+          gsap.to(".white-screen", {
+            width: "100%",
+            height: "100%",
+            top: 0,
+            marginTop: 0,
+            left: 0,
+            marginLeft: 0,
+            borderRadius: 0,
+            background: "white",
+            duration: 0.2,
+          });
+        }, delay);
+        $(".btn").css({
+          display: "none",
+        });
+        setTimeout(function () {
+          $(".hero").css({
+            display: "none",
+          });
+          $("canvas").css({
+            display: "none",
+          });
+          $(".page2").css({
+            display: "initial",
+          });
+          $(".webgl").css({
+            display: "initial",
+          });
+          gsap.from(".title-left", {
+            opacity: 0,
+            y: -50,
+            ease: Power4.easeOut,
+            duration: 2,
+          });
+        }, 1000);
+        home = false;
+      }
+
+      $(function () {
+        gsap.to(".stagger2", {
+          opacity: "100%",
+          ease: Power3.easeOut,
+          stagger: 0.3,
+          duration: 2,
+        });
+        $(".menu").click(function () {
+          expand();
+        });
+        $(".cross").click(function () {
+          collapse();
+        });
+        $(".home-button").click(function () {
+          collapse();
+          setTimeout(function () {
+            location.reload();
+          }, 700);
+          {
+          }
+        });
+        $(".projects-button").click(function () {
+          collapse();
+          if (home) {
+            exitHome();
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        });
+        $(".about-button").click(function () {
+          collapse();
+          if (home) {
+            exitHome();
+            setTimeout(function () {
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth",
+              });
+            }, 2000);
+          } else {
+            window.scrollTo({
+              top: document.body.scrollHeight,
+              behavior: "smooth",
+            });
+          }
+        });
+
+        $(".btn").click(function () {
+          exitHome();
+        });
+      });
+
+      gsap.to(".expand", {
+        scrollTrigger: {
+          trigger: ".expand",
+          start: "100px",
+          end: "200px",
+          scrub: true,
+        },
+        borderRadius: 0,
+        marginLeft: 0,
+        marginRight: 0,
+      });
+
+      gsap.from(".project1", {
+        scrollTrigger: {
+          start: "400px",
+        },
+        opacity: 0,
+        y: -50,
+        ease: Power4.easeOut,
+        duration: 2,
+      });
+      gsap.from(".project2", {
+        scrollTrigger: {
+          start: "800px",
+        },
+        opacity: 0,
+        y: -50,
+        ease: Power4.easeOut,
+        duration: 2,
+      });
+      gsap.from(".project3", {
+        scrollTrigger: {
+          start: "1200px",
+        },
+        opacity: 0,
+        y: -50,
+        ease: Power4.easeOut,
+        duration: 2,
+      });
+      gsap.from(".project4", {
+        scrollTrigger: {
+          start: "1600px",
+        },
+        opacity: 0,
+        y: -50,
+        ease: Power4.easeOut,
+        duration: 2,
+      });
+    </script>
+  </body>
+</html>
